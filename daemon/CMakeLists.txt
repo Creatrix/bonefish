@@ -15,3 +15,5 @@ target_link_libraries(bonefish_bin
 if (RT_FOUND)
     target_link_libraries(bonefish_bin ${RT_LIBRARIES})
 endif()
+
+install(TARGETS bonefish_bin DESTINATION bin)
