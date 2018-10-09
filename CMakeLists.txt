@@ -64,7 +64,7 @@ if(WIN32)
 endif()
 
 find_package(Boost REQUIRED COMPONENTS ${BOOST_COMPONENTS})
-find_package(RT)
+#find_package(RT)
 find_package(Threads)
 
 include_directories(

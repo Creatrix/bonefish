@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-
+#ifdef BOOST_ASIO_HAS_LOCAL_SOCKETS
 #ifndef BONEFISH_UDS_LISTENER_HPP
 #define BONEFISH_UDS_LISTENER_HPP
 
@@ -51,4 +51,5 @@ private:
 
 } // namespace bonefish
 
+#endif
 #endif // BONEFISH_UDS_LISTENER_HPP

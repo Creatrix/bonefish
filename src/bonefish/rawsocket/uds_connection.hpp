@@ -17,6 +17,8 @@
 #ifndef BONEFISH_UDS_CONNECTION_HPP
 #define BONEFISH_UDS_CONNECTION_HPP
 
+#ifdef BOOST_ASIO_HAS_LOCAL_SOCKETS
+
 #include <bonefish/rawsocket/rawsocket_connection.hpp>
 
 #include <boost/asio/buffer.hpp>
@@ -80,4 +82,5 @@ inline void uds_connection::write(
 
 } // namespace bonefish
 
+#endif
 #endif // BONEFISH_UDS_CONNECTION_HPP
