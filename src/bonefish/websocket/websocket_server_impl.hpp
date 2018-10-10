@@ -56,6 +56,7 @@ private:
 
 private:
     boost::asio::io_service& m_io_service;
+    boost::asio::ip::tcp::socket *m_tcp_socket;
     std::shared_ptr<websocketpp::server<websocket_config>> m_server;
     std::shared_ptr<wamp_routers> m_routers;
     std::shared_ptr<wamp_serializers> m_serializers;

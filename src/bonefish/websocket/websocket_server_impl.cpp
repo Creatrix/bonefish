@@ -89,6 +89,7 @@ void websocket_server_impl::start(const boost::asio::ip::address& ip_address, ui
             shared_self->on_fail(handle);
         }
     };
+
     m_server->set_fail_handler(fail_handler);
 
     auto validate_handler = [weak_self](websocketpp::connection_hdl handle) -> bool {
@@ -123,6 +124,7 @@ void websocket_server_impl::start(const boost::asio::ip::address& ip_address, ui
     m_server->set_reuse_addr(true);
     m_server->listen(endpoint);
     m_server->start_accept();
+
 }
 
 void websocket_server_impl::shutdown()
@@ -134,11 +136,12 @@ void websocket_server_impl::shutdown()
 void websocket_server_impl::on_socket_init(websocketpp::connection_hdl handle,
         boost::asio::ip::tcp::socket& s)
 {
-    s.set_option(boost::asio::ip::tcp::no_delay(true));
+
 }
 
 void websocket_server_impl::on_open(websocketpp::connection_hdl handle)
 {
+    
 }
 
 void websocket_server_impl::on_close(websocketpp::connection_hdl handle)
