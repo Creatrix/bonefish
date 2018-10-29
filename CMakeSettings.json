@@ -9,7 +9,7 @@
       ],
       "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
       "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
-      "cmakeCommandArgs": "-DCMAKE_INSTALL_PREFIX=c:\\local\\bonefish",
+      "cmakeCommandArgs": "-DCMAKE_INSTALL_PREFIX=c:\\local\\bonefish -DCMAKE_PREFIX_PATH=\"c:\\local\\include;c:\\local\\msgpack;c:\\local\\msgpack\\include\"",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     }

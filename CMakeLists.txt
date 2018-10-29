@@ -80,6 +80,10 @@ include_directories(
     ${Boost_INCLUDE_DIRS}
 )
 
+if(WIN32)
+include_directories(${CMAKE_PREFIX_PATH})
+endif()
+
 link_directories(${CMAKE_INSTALL_PREFIX}/lib)
 
 add_subdirectory(examples)
