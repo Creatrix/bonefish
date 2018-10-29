@@ -6,6 +6,12 @@ option(stdlib "When building with clang, you can choose libc++ (default) or libs
 
 set(BOOST_COMPONENTS program_options system thread regex random)
 
+find_file(CONAN_BUILD_INFO conanbuildinfo.cmake PATHS ..)
+
+if (CONAN_BUILD_INFO)
+    message("Configuring for Conan Build!")
+endif()
+
 if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     if (NOT stdlib)
         set(stdlib "libc++")
