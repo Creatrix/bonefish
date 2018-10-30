@@ -134,7 +134,7 @@ set(PRIVATE_HEADERS
 add_library(bonefish STATIC ${SOURCES} ${PUBLIC_HEADERS} ${PRIVATE_HEADERS})
 
 if (IS_CONAN_BUILD)
-    set(BONEFISH_LINK_LIBS boost::boost msgpack::msgpack websocketpp::websocketpp)
+    set(BONEFISH_LINK_LIBS boost::boost msgpack::msgpack websocketpp::websocketpp json-msgpack::json-msgpack rapidjson::rapidjson)
 else()
     set(BONEFISH_LINK_LIBS ${Boost_LIBRARIES})
 endif()
