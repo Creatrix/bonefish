@@ -75,7 +75,7 @@ endif()
 
 find_package(Boost REQUIRED COMPONENTS ${BOOST_COMPONENTS})
 if (IS_CONAN_BUILD)
-    find_packaage(msgpack)
+    find_package(msgpack)
     find_package(websocketpp)
     find_package(json-msgpack)
     find_package(rapidjson)
