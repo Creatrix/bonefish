@@ -133,8 +133,14 @@ set(PRIVATE_HEADERS
 
 add_library(bonefish STATIC ${SOURCES} ${PUBLIC_HEADERS} ${PRIVATE_HEADERS})
 
+if (IS_CONAN_BUILD)
+    set(BONEFISH_LINK_LIBS boost::boost)
+else()
+    set(BONEFISH_LINK_LIBS ${Boost_LIBRARIES})
+endif()
+
 target_link_libraries(bonefish
-    ${Boost_LIBRARIES})
+    ${BONEFISH_LINK_LIBS})
 
 foreach(h ${PUBLIC_HEADERS})
     get_filename_component(HEADER_INCLUDE_DIRECTORY include/${h} PATH) # use DIRECTORY instead of PATH once requiring CMake 3.0

@@ -10,6 +10,7 @@ find_file(CONAN_BUILD_INFO conanbuildinfo.cmake PATHS ..)
 
 if (CONAN_BUILD_INFO)
     message("Configuring for Conan Build!")
+    set(IS_CONAN_BUILD YES)
     set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_BINARY_DIR})
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
