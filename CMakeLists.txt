@@ -79,6 +79,7 @@ if (IS_CONAN_BUILD)
     find_package(websocketpp)
     find_package(json-msgpack)
     find_package(rapidjson)
+    find_package(cppcodec)
 endif()
 if (UNIX)
     find_package(RT)
@@ -91,8 +92,8 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/third-party/cppcodec
     ${CMAKE_SOURCE_DIR}/third-party/json-msgpack/include
     ${CMAKE_SOURCE_DIR}/third-party/msgpack-c/include
-    ${CMAKE_SOURCE_DIR}/third-party/rapidjson/include
-    ${CMAKE_SOURCE_DIR}/third-party/websocketpp
+    #${CMAKE_SOURCE_DIR}/third-party/rapidjson/include
+    #${CMAKE_SOURCE_DIR}/third-party/websocketpp
     ${Boost_INCLUDE_DIRS}
 )
 
