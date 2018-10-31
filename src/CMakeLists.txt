@@ -138,9 +138,7 @@ if (IS_CONAN_BUILD)
 else()
     set(BONEFISH_LINK_LIBS ${Boost_LIBRARIES})
 endif()
-if (UNIX)
-    set(BONEFISH_LINK_LIBS ${BONEFISH_LINK_LIBS} pthread)
-endif()
+
 target_link_libraries(bonefish
     ${BONEFISH_LINK_LIBS})
 
