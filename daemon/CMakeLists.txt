@@ -6,9 +6,14 @@ set_target_properties(bonefish_bin PROPERTIES OUTPUT_NAME bonefish)
 
 add_dependencies(bonefish_bin bonefish)
 
+if (IS_CONAN_BUILD)
+    set(BONEFISH_BIN_LIBS Threads::Threads boost::boost msgpack::msgpack websocketpp::websocketpp json-msgpack::json-msgpack rapidjson::rapidjson cppcodec::cppcodec)
+else()
+    set(BONEFISH_BIN_LIBS ${Boost_LIBRARIES})
+endif()
 target_link_libraries(bonefish_bin
     bonefish
-    ${Boost_LIBRARIES}
+    ${BONEFISH_BIN_LIBS}
     ${CMAKE_DL_LIBS}
     ${CMAKE_THREAD_LIBS_INIT})
 
