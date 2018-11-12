@@ -2,6 +2,7 @@
 msgpack/1.4.2@creatrix/stable
 websocketpp/0.8.1@bincrafters/stable
 rapidjson/1.1.0@bincrafters/stable
+boost/1.66.0@conan/stable
 
 [generators]
 cmake_find_package
