@@ -1,0 +1,16 @@
+[requires]
+msgpack/1.4.2@creatrix/stable
+websocketpp/0.8.1@bincrafters/stable
+rapidjson/1.1.0@bincrafters/stable
+
+[generators]
+cmake_find_package
+cmake_paths
+cmake
+
+[options]
+
+[imports]
+bin, *.dll -> ./bin # Copies all dll files from packages bin folder to my "bin" folder
+lib, *.dylib* -> ./bin # Copies all dylib files from packages lib folder to my "bin" folder
+lib, *.so* -> ./bin # Copies all dylib files from packages lib folder to my "bin" folder
