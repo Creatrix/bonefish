@@ -5,6 +5,8 @@ option(shared "build bonefish as a shared library" OFF)
 option(stdlib "When building with clang, you can choose libc++ (default) or libstdc++" OFF)
 
 set(BOOST_COMPONENTS program_options system thread regex random)
+execute_process(COMMAND conan install ${CMAKE_CURRENT_SOURCE_DIR} -b missing -s build_type=Release)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_BINARY_DIR})
 
 find_file(CONAN_BUILD_INFO conanbuildinfo.cmake PATHS ..)
 
