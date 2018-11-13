@@ -7,7 +7,7 @@ set_target_properties(bonefish_bin PROPERTIES OUTPUT_NAME bonefish)
 add_dependencies(bonefish_bin bonefish)
 
 if (IS_CONAN_BUILD)
-    set(BONEFISH_BIN_LIBS Threads::Threads boost_program_options::boost_program_options boost_system::boost_system boost_thread::boost_thread boost_regex::boost_regex boost_random::boost_random msgpack::msgpack websocketpp::websocketpp json-msgpack::json-msgpack rapidjson::rapidjson cppcodec::cppcodec)
+    set(BONEFISH_BIN_LIBS Threads::Threads boost_format::boost_format boost_program_options::boost_program_options boost_system::boost_system boost_thread::boost_thread boost_regex::boost_regex boost_random::boost_random msgpack::msgpack websocketpp::websocketpp json-msgpack::json-msgpack rapidjson::rapidjson cppcodec::cppcodec)
 else()
     set(BONEFISH_BIN_LIBS ${Boost_LIBRARIES})
 endif()

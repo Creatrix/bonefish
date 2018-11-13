@@ -5,7 +5,8 @@ class BonefishConan(ConanFile):
     
     requires = "json-msgpack/0.0.1@creatrix/stable", "msgpack/1.4.2@creatrix/stable", \
                "websocketpp/0.8.1@bincrafters/stable", "rapidjson/1.1.0@bincrafters/stable", \
-                "cppcodec/0.0.1@creatrix/stable", "boost_program_options/1.66.0@bincrafters/stable"
+                "cppcodec/0.0.1@creatrix/stable", "boost_program_options/1.66.0@bincrafters/stable", \
+		"boost_format/1.66.0@bincrafters/stable"
     name = "bonefish"
     version = "1.0.3"
     license = "LICENSE.md"

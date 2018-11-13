@@ -6,6 +6,7 @@ add_dependencies(integration bonefish)
 
 target_link_libraries(integration
     bonefish
+    boost_format::boost_format
     ${Boost_LIBRARIES}
     ${CMAKE_DL_LIBS}
     ${CMAKE_THREAD_LIBS_INIT})
