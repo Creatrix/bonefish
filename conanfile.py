@@ -8,7 +8,7 @@ class BonefishConan(ConanFile):
                 "cppcodec/0.0.1@creatrix/stable", "boost_program_options/1.66.0@bincrafters/stable", \
 		"boost_format/1.66.0@bincrafters/stable"
     name = "bonefish"
-    version = "1.0.3"
+    version = "1.0.5"
     license = "LICENSE.md"
     url = "https://github.com/Creatrix/bonefish.git"
     description = "Bonefish WAMP Router"
