@@ -9,7 +9,7 @@ if (NOT CMAKE_BUILD_TYPE)
 	message("Build Type Not Set. Defaulting to Release...")
 	set(CMAKE_BUILD_TYPE "Release")
 endif()
-execute_process(COMMAND conan install ${CMAKE_CURRENT_SOURCE_DIR} --build=missing -s build_type=${CMAKE_BUILD_TYPE} $ENV{CONAN_PROFILE})
+execute_process(COMMAND conan install ${CMAKE_CURRENT_SOURCE_DIR} --build=missing -s build_type=${CMAKE_BUILD_TYPE})
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_BINARY_DIR})
 
 find_file(CONAN_BUILD_INFO conanbuildinfo.cmake PATHS ${CMAKE_BINARY_DIR})
